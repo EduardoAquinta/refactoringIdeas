@@ -1,15 +1,6 @@
 // Task: Use inline variable, inline method and ide hints make this code simpler.
 const overlyObfuscated = (n) => {
-    const firstNumber = 1
-    const secondNumber = 1
-
-    if (isFirstNumber(n)) {
-        return firstNumber
-    } else if (isSecondNumber(n)) {
-        return secondNumber
-    } else {
-        return getGeneralFibonacciNumber(n)
-    }
+    return isFirstNumber(n) || n === 2 ? 1 : getGeneralFibonacciNumber(n);
 }
 
 function getGeneralFibonacciNumber(n) {
@@ -26,10 +17,6 @@ function getPreviousFibonacciNumber(n) {
 
 function getMthPreviousFibonacciNumber(n, m) {
     return overlyObfuscated(n - m)
-}
-
-function isSecondNumber(n) {
-    return n === 2
 }
 
 function isFirstNumber(n) {

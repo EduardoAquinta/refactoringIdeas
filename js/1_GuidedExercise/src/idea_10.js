@@ -1,14 +1,10 @@
 // Task: Use introduce parameter to replace the double and triple with a single function that takes an argument.
-const similarFunctions = (n) => {
-    return [double(n), triple(n)]
+const similarFunctions = (n, x = getX(n)) => {
+    return x
+}
+function getX(n) {
+    return [n * 2, n * 3];
 }
 
-function double(n) {
-    return n * 2
-}
-
-function triple(n) {
-    return n * 3
-}
 
 module.exports = {similarFunctions}

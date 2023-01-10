@@ -1,8 +1,8 @@
-// Task: Rename makeBigger to something more specific.
+// Task: Rename numberListDouble to something more specific.
 const renameAPoorMethodName = (numberList) => {
-    return numberList.map(makeBigger)
+    return numberList.map(numberListDouble)
 }
 
-const makeBigger = (number) => number * 2
+const numberListDouble = (number) => number * 2
 
 module.exports = {renameAPoorMethodName}

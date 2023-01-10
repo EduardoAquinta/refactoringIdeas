@@ -3,7 +3,8 @@ const introduceAVariable = (numberList) => {
     const bigNumbers = []
 
     numberList.forEach((number) => {
-        if (number > numberList.reduce((accumulator, current) => accumulator + current, 0) / numberList.length) {
+        let number1 = numberList.reduce((accumulator, current) => accumulator + current, 0) / numberList.length;
+        if (number > number1) {
             bigNumbers.push(number)
         }
     })

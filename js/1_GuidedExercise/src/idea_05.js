@@ -3,16 +3,13 @@
 // first, then the phone number is normalised.
 const shiftLines = (emailAddress, phoneNumber) => {
     emailAddress = emailAddress.toLowerCase()
-    const phoneNumberParts = phoneNumber.split(' ')
     const emailAddressParts = emailAddress.split('+')
-    phoneNumber = phoneNumberParts.join('')
-
     if (emailAddressParts.length > 1) {
         emailAddress = emailAddressParts[0] + '@' + emailAddressParts[1].split('@')[1]
     }
-
+    const phoneNumberParts = phoneNumber.split(' ')
+    phoneNumber = phoneNumberParts.join('')
     phoneNumber = '+44' + phoneNumber.substring(1)
-
     return [emailAddress, phoneNumber]
 }
 

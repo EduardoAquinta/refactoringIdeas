@@ -8,7 +8,11 @@ const extractAMethod = (sentence) => {
 
         const vowels = ['a', 'e', 'i', 'o', 'u']
         vowels.forEach((vowel) => {
-            vowellessWord = vowellessWord.replace(new RegExp(vowel, 'g'), '')
+            function getVowellessWord() {
+                return vowellessWord.replace(new RegExp(vowel, 'g'), '');
+            }
+
+            vowellessWord = getVowellessWord()
         })
 
         counts.push(word.length - vowellessWord.length)
